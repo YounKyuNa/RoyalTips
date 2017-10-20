@@ -2,8 +2,10 @@ package com.example.charles.royaltips.model;
 
 /**
  * Created by charles on 2017. 10. 20..
- * Card List
+ * Clan
  */
 
-public class CardList {
+public class Clan {
+    Donate donate;
+    Request request;
 }

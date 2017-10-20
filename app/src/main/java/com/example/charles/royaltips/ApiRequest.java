@@ -1,7 +1,11 @@
 package com.example.charles.royaltips;
 
-import com.example.charles.royaltips.model.CardList;
+import com.example.charles.royaltips.model.Arena;
+import com.example.charles.royaltips.model.Card;
+import com.example.charles.royaltips.model.Chest;
 import com.example.charles.royaltips.model.Home;
+
+import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Retrofit;
@@ -41,8 +45,12 @@ public class ApiRequest {
 
 
     public interface ApiCallInterface {
+
         @GET(CLASH_XYZ) Call<Home> getHome();
-        @GET(CLASH_XYZ) Call<CardList> getCardList();
+
+        @GET(CLASH_XYZ + "api/chests")  Call<List<Chest>>   getChests();
+        @GET(CLASH_XYZ + "api/cards")   Call<List<Card>>    getCardList();
+        @GET(CLASH_XYZ + "api/arenas")  Call<List<Arena>>   getArenaList();
     }
 
     public static String getCardUrl(String name) {

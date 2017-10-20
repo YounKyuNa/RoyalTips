@@ -2,16 +2,16 @@ package com.example.charles.royaltips.model;
 
 /**
  * Created by charles on 2017. 10. 20..
- * 카드 덱
+ * 상자
  */
 
-public class Card {
+public class Chest {
     public String idName;
-    public String rarity;
-    public String type;
     public String name;
-    public String description;
-    public int arena;
-    public int elixirCost;
     public int order;
+    public Unlock unlock;
+    public int gemCost;
+    public Gold gold;
+    public Cards cards;
+    public int arena;
 }
