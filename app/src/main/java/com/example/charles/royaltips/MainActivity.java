@@ -2,6 +2,8 @@ package com.example.charles.royaltips;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 
 import com.example.charles.royaltips.model.Arena;
@@ -17,6 +19,10 @@ import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
 
+    RecyclerView mRecyclerView;
+    GridLayoutManager mLayoutManager;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,8 +33,16 @@ public class MainActivity extends AppCompatActivity {
         requestCards();
         requestChests();
         requestArenas();
+
+        initLayout();
     }
 
+    void initLayout() {
+        mLayoutManager = new GridLayoutManager(this, 2);
+        mRecyclerView = findViewById(R.id.recyclerView);
+        mRecyclerView.setLayoutManager(mLayoutManager);
+
+    }
 
     /**
      * Base route
