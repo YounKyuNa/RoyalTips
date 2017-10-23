@@ -6,4 +6,12 @@
 
     <color name="imageBorder">#b2dedede</color>
 
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="gray">#7c7c7c</color>
+
+    <color name="pageColor1">#FFF59D</color>
+    <color name="pageColor2">#FFCC80</color>
+    <color name="pageColor3">#FFAB91</color>
+
 </resources>
